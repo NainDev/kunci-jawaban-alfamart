@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kunci Jawaban Latihan Soal</title>
+<meta name="description" content="Cari soal dan jawaban dari lima bank latihan: Penerimaan, Penataan, Penyimpanan, Product Handling, dan SO.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%232f80ed'/%3E%3Cpath d='M18 33l9 9 19-21' fill='none' stroke='%23fff' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hd"><div class="w hd-in">
+  <a class="brand" href="#"><span class="mono"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span><span>Kunci Jawaban<small>Cari soal, lihat jawabannya</small></span></a>
+  <button id="tema" class="ib" type="button" aria-label="Ganti tema"></button>
+</div></header>
+
+<main class="w">
+  <section class="intro">
+    <h1>Cari jawaban dari bank soal kamu.</h1>
+    <p>Pilih bank soal, ketik kata kunci dari soal, lalu jawaban yang benar langsung ditandai. Semua data berasal dari lima file Excel yang kamu kirim.</p>
+  </section>
+
+  <div class="sticky">
+    <div class="sets" id="sets" role="tablist" aria-label="Pilih bank soal"></div>
+    <label class="search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Ketik kata dari soal atau jawaban…" autocomplete="off" spellcheck="false" aria-label="Cari soal">
+      <kbd>/</kbd><button id="clr" type="button" aria-label="Hapus pencarian" hidden>&times;</button></label>
+    <div class="bar"><span id="info" aria-live="polite"></span>
+      <label class="tg"><input id="onlyAns" type="checkbox"><i></i>Hanya cari di soal</label></div>
+  </div>
+
+  <div id="res" class="res"></div>
+  <p id="more" class="more" hidden></p>
+</main>
+<footer class="w ft">Bank soal berisi pengulangan dengan urutan pilihan yang diacak, jadi soal yang sama sudah digabung. Periksa kembali bila soal di ujianmu sedikit berbeda.</footer>
+<div id="toast" class="toast" role="status"></div>
+
+<script src="data/index.js"></script>
+<script src="data/penerimaan.js"></script>
+<script src="data/penataan.js"></script>
+<script src="data/penyimpanan.js"></script>
+<script src="data/handling.js"></script>
+<script src="data/so.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
